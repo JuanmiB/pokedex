@@ -1,0 +1,10 @@
+.imgCarrito{
+    width: 50px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.imgCarrito:hover{
+    transform: scale(1.3)
+}
+

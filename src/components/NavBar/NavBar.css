@@ -1,0 +1,15 @@
+header{
+margin: 10px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-bottom: 1px solid black
+}
+li{
+    display: inline-block;
+    margin: 1rem;
+    cursor: pointer;
+}
+li:hover{
+    transform: scale(1.3)
+}
