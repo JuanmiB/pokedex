@@ -1,0 +1,38 @@
+.itemImg{
+    width: 300px;
+    height: 380px;
+    border-radius: 10px;
+}
+.item-Box{
+    border: solid 2px silver;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+    gap: 5px;
+    border-radius: 5%;
+    background-color: #fafafa;
+}
+h3{
+    font-size: 26px;
+    border-top: salmon solid 1px;
+    justify-content: center;
+    display: flex;
+    margin-top: 5px;
+
+}
+.price{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+.details{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.ident{
+    font-size: 10px;
+}

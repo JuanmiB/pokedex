@@ -1,15 +1,39 @@
+h1{
+    color: red;
+    font-size: 1em;
+}
+.navBar{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(127, 229, 255, 0.349);
+    padding: 10px;
+    /* position: fixed; */
+    
+}
 header{
-margin: 10px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-border-bottom: 1px solid black
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+ul{
+    display: flex;
+    gap: 10vw;
+    list-style: none;
+    color: black;
+    font-size: 0.8em;
+}
+
+.logo{
+    width: 20vh;
 }
 li{
     display: inline-block;
     margin: 1rem;
     cursor: pointer;
+    font-weight: bolder;
+
 }
 li:hover{
-    transform: scale(1.3)
+    transform: scale(1.5)
 }
