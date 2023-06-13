@@ -12,30 +12,30 @@ const productos = [
     { nombre: "Manga Tokyo Revengers", precio: 200, id: "11", img: "../productos/manga-tokyorev.jpg", idCat: "manga", cantidad: 4},
 ]
 
-export const getProductos = () => {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve(productos)
-        }, 200)
-    })
+// export const getProductos = () => {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             resolve(productos)
+//         }, 200)
+//     })
     
-}
+// }
 
-export const getUnProducto = (id) => {
-    return new Promise(resolve => {
-        setTimeout(() => {
-            const producto = productos.find(prod => prod.id === id);
-            resolve(producto);
-        }, 100)
-    })
-}
+// export const getUnProducto = (id) => {
+//     return new Promise(resolve => {
+//         setTimeout(() => {
+//             const producto = productos.find(prod => prod.id === id);
+//             resolve(producto);
+//         }, 100)
+//     })
+// }
 
-//Creamos una funcion que retorne una categoria de productos
-export const getProductosPorCategoria = (idCategoria) => {
-    return new Promise(resolve => {
-        setTimeout(() => {
-            const productosCategoria = productos.filter(prod => prod.idCat === idCategoria)
-            resolve(productosCategoria)
-        }, 100)
-    })
-}
+// //Creamos una funcion que retorne unsa categoria de productos
+// export const getProductosPorCategoria = (idCategoria) => {
+//     return new Promise(resolve => {
+//         setTimeout(() => {
+//             const productosCategoria = productos.filter(prod => prod.idCat === idCategoria)
+//             resolve(productosCategoria)
+//         }, 100)
+//     })
+// }
