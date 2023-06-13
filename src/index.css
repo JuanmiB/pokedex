@@ -1,7 +1,6 @@
 body {
-  margin: 3rem;
+  margin: 0rem;
   font-family: 'Barlow Condensed', sans-serif;
-  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: beige;
 }

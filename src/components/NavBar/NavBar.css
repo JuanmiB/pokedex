@@ -1,39 +1,30 @@
-h1{
-    color: red;
-    font-size: 1em;
-}
 .navBar{
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(127, 229, 255, 0.349);
-    padding: 10px;
-    /* position: fixed; */
-    
+    background-color: rgba(127, 229, 255, 0.3);
+    padding: 10px; 
 }
-header{
+header {
     display: flex;
-    justify-content: space-around;
     align-items: center;
-
+    justify-content: space-evenly;
+    border-bottom: 1px solid black;
 }
-ul{
-    display: flex;
-    gap: 10vw;
-    list-style: none;
-    color: black;
-    font-size: 0.8em;
-}
-
 .logo{
     width: 20vh;
 }
 li{
+    
     display: inline-block;
     margin: 1rem;
     cursor: pointer;
     font-weight: bolder;
-
 }
 li:hover{
     transform: scale(1.5)
 }
+h1{
+    font-size: 1.4rem;
+}
+a{
+    color: black;
+    text-decoration: none;
+} 

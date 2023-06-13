@@ -19,7 +19,7 @@ const ItemDetail = ({ id, producto, precio, img, stock }) => {
     return (
         <div className='contenedorItem'>
             <div className="contenedorImg">
-                <img src={img} alt={producto} />
+                <img src={img} alt={producto} className="img-prod" />
             </div>
             <div className="contenedorInfo">
                 <h2>{producto} </h2>
@@ -30,9 +30,11 @@ const ItemDetail = ({ id, producto, precio, img, stock }) => {
                 <p className="stock">{stock ? "Hay stock" : "No hay stock"}</p>
                 <span>Unidades disponibles:{stock} </span>
             </div>
+            
             {
                 cantidad > 0 ? (<Link to="/cart">Terminar compra</Link>) : (<ItemCount stock={stock} fnAdd={manejadorCant} />)
             }
+
         </div>
     )
 }

@@ -31,7 +31,6 @@ function App() {
             <Route path='/cart' element={<Cart />} />
             <Route path='*' element={<h2>Sitio en constru</h2>} />
             <Route path='/checkout' element={<Checkout />} />
-
           </Routes>
           </CarritoProvider>
       </BrowserRouter>

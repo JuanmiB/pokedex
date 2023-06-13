@@ -1,9 +1,7 @@
-.body{
+.product-list{
     width: 95vw;
     border: solid black 2px;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+
 }
 
 .box{

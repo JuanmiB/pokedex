@@ -18,12 +18,14 @@ const Checkout = () => {
 
         //validar ue los coampos del formulario esten completos
         if (!nombre || !apellido || !telefono || !email || !emailConfirmacion) {
-            setError("Completa los campos")
+            setError("Completa todos los campos por favor")
+            return
         }
 
         //validar que los emails coincidan
         if (email !== emailConfirmacion) {
-            setError("Los emails no coinciden")
+            setError("Los emails no coinciden!")
+            return
         }
 
         const orden = {
@@ -46,7 +48,7 @@ const Checkout = () => {
             })
             .catch((error) => {
                 console.log("error al crear la orden", error);
-                setError("errro al generar la orden de compra, intente mas t")
+                setError("errro al generar la orden de compra, intente mas tarde")
             })
 
     }
@@ -58,7 +60,7 @@ const Checkout = () => {
             <form onSubmit={manejadorSubmit}>
                 {carrito.map(producto => (
                     <div key={producto.item.id}>
-                        <p>{producto.item.nombre} X {producto.cantidad} </p>
+                        <p>{producto.item.producto} X {producto.cantidad} </p>
                         <p>Precio: $ {producto.item.precio} </p>
                         <hr />
 
@@ -71,8 +73,8 @@ const Checkout = () => {
                     <input type="text" value={nombre} onChange={(e) => setNombre(e.target.value)} />
                 </div>
                 <div>
-                    <label htmlFor="" value={apellido} onChange={(e) => setApellido(e.target.value)}>Apellido</label>
-                    <input type="text" />
+                    <label htmlFor="">Apellido</label>
+                    <input type="text" value={apellido} onChange={(e) => setApellido(e.target.value)} />
                 </div>
                 <div>
                     <label htmlFor="">Telefono</label>
@@ -80,11 +82,11 @@ const Checkout = () => {
                 </div>
                 <div>
                     <label htmlFor="">Email</label>
-                    <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} />
+                    <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
                 </div>
                 <div>
                     <label htmlFor="">Confirmacion de email</label>
-                    <input type="text" value={emailConfirmacion} onChange={(e) => setEmailConfirmacion(e.target.value)} />
+                    <input type="email" value={emailConfirmacion} onChange={(e) => setEmailConfirmacion(e.target.value)} />
                 </div>
                 {
                     error && <p> {error} </p>
@@ -92,7 +94,7 @@ const Checkout = () => {
                 <button type='submit'>Finalizar Orden</button>
                 {
                     ordenId && (
-                        <strong>Gracias! tu numoer de orden es: {ordenId} </strong>
+                        <strong>Gracias! tu numero de orden es: {ordenId} </strong>
                     )
                 }
             </form>

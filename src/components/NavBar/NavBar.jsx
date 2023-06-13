@@ -7,15 +7,14 @@ const NavBar = () => {
         <div className='navBar'>
             <header>
                 <Link to={"/"}>
-                <img src={logo} alt="logo" className='logo' />
+                    <img src={logo} alt="logo" className='logo' />
                 </Link>
-                <h1>OTAKU TIENDA</h1>
+                <h1><NavLink to={"/"} >OTAKU TIENDA</NavLink></h1>
                 <nav>
                     <ul>
-                        <li><NavLink to={"/"} >Home</NavLink></li>
                         <li><NavLink to={"/categoria/manga"} >Manga</NavLink></li>
                         <li><NavLink to={"/categoria/figuras"} >Figuras</NavLink></li>
-                        <li>Plus Ultra + </li>
+                        <li><NavLink to={"/categoria/taza"} > Tazas </NavLink></li>
                     </ul>
                 </nav>
                 <CartWidget />
